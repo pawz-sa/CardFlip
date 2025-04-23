@@ -1,0 +1,76 @@
+.card-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  will-change: transform;
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  border: 5px solid #815c2b;
+  overflow: hidden;
+}
+
+.card-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.card-face.front {
+  transform: rotateY(180deg);
+}
+
+.card-face.back {
+  transform: rotateY(0);
+  background-color: #815c2b;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.card-matched {
+  cursor: default;
+}
+
+.card.card-matched .card-face.front {
+  background-color: #f1f8e9;
+}
+
+.card.card-matched img {
+  filter: brightness(1.05);
+}
+
+.card.card-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .card:not(.card-disabled):not(.card-matched):hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px) rotateY(0);
+  }
+  
+  .card.flipped:not(.card-disabled):not(.card-matched):hover {
+    transform: translateY(-2px) rotateY(180deg);
+  }
+}

@@ -1,0 +1,49 @@
+.welcome-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-logo {
+  position: relative;
+  width: 46%;
+  height: auto;
+  margin-bottom: 1rem;
+  animation: slideDownFade 1s ease-out;
+  transform-origin: top center;
+}
+
+.game-hint {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  color: #555555;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  animation: fadeIn 1s ease-out;
+}
+
+.start-button {
+  padding: 1rem 2.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: bold;
+  background-color:#4caf50;
+  color: white;
+  border: none;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: slideUpFade 1s ease-out;
+  transform-origin: bottom center;
+}
+
+.start-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 3px 3px #388e3c;
+}
