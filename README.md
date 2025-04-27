@@ -57,7 +57,7 @@ yarn dev
 
 This project is deployed on **Vercel**.
 
-👉 View [CardFlip Live](https://card-flip-m7es.vercel.app/) on Vercel
+👉 View [CardFlip](https://card-flip-lac.vercel.app/) on Vercel
 
 ## Game Rules
 
