@@ -17,7 +17,7 @@ export default function WelcomePage() {
       </div>
       <button 
         className="start-button"
-        onClick={() => navigate('/CardFlip/difficulty')}
+        onClick={() => navigate('/difficulty')}
       >
         GET START
       </button>

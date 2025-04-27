@@ -213,7 +213,7 @@ function GamePage() {
 
   return (
     <div className="game-page">
-      <button className="back-button" onClick={() => navigate('/CardFlip/difficulty')}>
+      <button className="back-button" onClick={() => navigate('/difficulty')}>
         <ArrowBackIosOutlinedIcon /> BACK
       </button>
       <div className="game-container">

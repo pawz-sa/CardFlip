@@ -13,7 +13,7 @@ export default function DifficultyPage() {
 
   const goToGame = (difficulty) => {
     if (difficulty) { 
-      navigate('/CardFlip/game', { state: { difficulty } })
+      navigate('/game', { state: { difficulty } })
     }
   }
 
@@ -26,7 +26,7 @@ export default function DifficultyPage() {
 
   return (
     <div className="difficulty-page">
-      <button className="back-button" onClick={() => navigate('/CardFlip/')}>
+      <button className="back-button" onClick={() => navigate('/')}>
         <ArrowBackIosOutlinedIcon /> BACK
       </button>
       

@@ -8,9 +8,9 @@ import GamePage from "./pages/game"
 export default function App() {
   return (
       <Routes>
-        <Route path="/CardFlip/" element={<WelcomePage />} />
-        <Route path="/CardFlip/difficulty" element={<DifficultyPage />} />
-        <Route path="/CardFlip/game" element={<GamePage />} />
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/difficulty" element={<DifficultyPage />} />
+        <Route path="/game" element={<GamePage />} />
       </Routes>
   )
 }
